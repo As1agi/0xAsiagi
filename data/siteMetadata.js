@@ -14,7 +14,7 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.jpg',
   socialBanner: '/static/images/logo.png',
-  email: 'asiagijoseph1@gmail.com',
+  email: '0xn00bi3@gmail.com',
   github: 'https://github.com/As1agi',
   twitter: 'https://x.com/0xAsiagi',
   linkedin: 'https://www.linkedin.com/in/thetalhatahir',
