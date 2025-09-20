@@ -1,8 +1,8 @@
 # 0xAsiagi.com
 
-Welcome to my personal blog! This site is built using a template generously provided by [Timothy Lin](https://github.com/timlrx/tailwind-nextjs-starter-blog), which I have customized to reflect my own content and style.  
+Welcome to my personal blog! This site is built using a template generously provided by [Timothy Lin](https://github.com/timlrx/tailwind-nextjs-starter-blog), which I have customised to reflect my own content and style.  
 
-I mostly write about **technology, cybersecurity, productivity**, and occasionally share **book reviews**.  
+I mostly write about **technology, cybersecurity, Mathematics**, **Physics and Geek stuff**.  
 
 My blog is also featured on Vercel's template showcase under [Tailwind Next.js Starter Blog](https://vercel.com/templates/next.js/tailwind-css-starter-blog).  
 
@@ -10,8 +10,9 @@ My blog is also featured on Vercel's template showcase under [Tailwind Next.js S
 
 - **Next.js** with **TypeScript**  
 - **TailwindCSS**  
-- **ContentLayer**  
-- **Deployed on Vercel**  
+- **Javascript**  
+- **CSS**
+- **Markdown**  
 
 ## Support
 
