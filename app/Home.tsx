@@ -5,7 +5,7 @@ import Github from '@/components/Github'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import { themes, MAX_DISPLAY } from './constants'
-import Skills from '@/components/Skills' // new SSR Skills component
+import Skills from '@/components/skills' 
 
 export default function Home({ posts }) {
   const randomTheme = themes[Math.floor(Math.random() * themes.length)]
@@ -45,7 +45,7 @@ export default function Home({ posts }) {
           </h3>
 
           {/* GitHub Component */}
-          <Github />
+          <Github color={randomTheme.color}/>
         </div>
 
         {/* Blog Posts */}

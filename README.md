@@ -1,22 +1,22 @@
-# thetalhatahir.com
+# 0xAsiagi.com
 
-This is my personal blog designed using the generous template provided by [Timothy Lin](https://github.com/timlrx/tailwind-nextjs-starter-blog)
+Welcome to my personal blog! This site is built using a template generously provided by [Timothy Lin](https://github.com/timlrx/tailwind-nextjs-starter-blog), which I have customized to reflect my own content and style.  
 
-I write mostly about tech and productivity. Sometimes I write book reviews.
+I mostly write about **technology, cybersecurity, productivity**, and occasionally share **book reviews**.  
 
-My Blog is also featured on Vercel's template website under [tailwind-css-starter-blog](https://vercel.com/templates/next.js/tailwind-css-starter-blog)
+My blog is also featured on Vercel's template showcase under [Tailwind Next.js Starter Blog](https://vercel.com/templates/next.js/tailwind-css-starter-blog).  
 
-## Tech stack
+## Tech Stack
 
-- Nextjs with Typescript
-- TailwindCSS
-- ContentLayer
-- Deployed on vercel
+- **Next.js** with **TypeScript**  
+- **TailwindCSS**  
+- **ContentLayer**  
+- **Deployed on Vercel**  
 
 ## Support
 
-Support this effort by giving a star on GitHub.
+If you enjoy the content or find this project useful, consider giving it a ⭐ on GitHub.  
 
-## Licence
+## License
 
-[MIT](https://github.com/talhatahir/thetalhatahir/blob/main/LICENSE)
+This project is licensed under the [MIT License](https://github.com/timlrx/tailwind-nextjs-starter-blog).  

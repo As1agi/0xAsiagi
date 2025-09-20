@@ -19,15 +19,15 @@ const ThemeSwitch = () => {
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
       className={clsx(
         'relative w-16 h-8 flex items-center rounded-full p-1 transition-colors duration-700 ease-in-out overflow-hidden',
-        isDark ? 'bg-gray-900' : 'bg-yellow-200'
+        isDark ? 'bg-gray-800 border-gray-700' : 'bg-yellow-200 border-yellow-300 border'
       )}
     >
       {/* Toggle ball */}
       <div
         className={clsx(
-          'absolute w-7 h-7 rounded-full transition-all duration-700 ease-in-out flex items-center justify-center border-2 border-current',
+          'absolute w-7 h-7 rounded-full flex items-center justify-center border-2 transition-all duration-700 ease-in-out',
           isDark
-            ? 'bg-gray-900 text-yellow-300 left-1 translate-x-8'
+            ? 'bg-gray-700 text-yellow-300 left-1 translate-x-8'
             : 'bg-yellow-200 text-yellow-500 left-1 translate-x-0'
         )}
       >
@@ -42,10 +42,8 @@ const ThemeSwitch = () => {
           strokeWidth="2"
         >
           {isDark ? (
-            // Crescent moon
             <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" />
           ) : (
-            // Hollow sun
             <>
               <circle cx="12" cy="12" r="5" />
               {Array.from({ length: 8 }).map((_, i) => {
@@ -61,7 +59,6 @@ const ThemeSwitch = () => {
         </svg>
       </div>
 
-      {/* Tailwind custom animations */}
       <style jsx>{`
         @keyframes breath {
           0%, 100% { transform: scale(1); }

@@ -2,12 +2,12 @@
 import { useRef, useEffect, useState } from 'react'
 
 const skills = [
-  { emoji: '💻', label: 'C++', level: 'Intermediate', anim: 'laptop-bounce', code: ["#include <iostream>", "int main() {", "  std::cout << \"Hello World!\" << std::endl;", "  return 0;", "}"] },
-  { emoji: '🐍', label: 'Python', level: 'Intermediate', anim: 'snake-slither', code: ["def greet(name):", "    print(f'Hello, {name}')", "", "for i in range(5):", "    greet('World')"] },
-  { emoji: '♟️', label: 'Chess', level: 'Intermediate', anim: 'chess-tilt', code: [] },
-  { emoji: '🕵️‍♂️', label: 'Reverse Engineering', level: 'Beginner', anim: 'detective-look', code: ["01100110 10101001 00110100 11001010", "E8 FF D4 89 01 23 45 67 ..."] },
-  { emoji: '🔐', label: 'Cryptography', level: 'Beginner', anim: 'lock-wiggle', code: ["AES-256 Encryption", "RSA Keys Generated", "Caesar Shift: KHOOR"] },
-  { emoji: '🌐', label: 'Web Exploitation', level: 'Beginner', anim: 'globe-spin', code: ["GET /index.html HTTP/1.1", "Host: example.com", "200 OK"] },
+  { emoji: '💻', label: 'C++', level: 'Intermediate', anim: 'laptop-bounce', code: ["#include <iostream>", "int main() {", "  std::cout << \"Hello World!\" << std::endl;", "  return 0;", "}   "] },
+  { emoji: '🐍', label: 'Python', level: 'Intermediate', anim: 'snake-slither', code: ["def greet(name):", "    print(f'Hello, {name}')", "", "for i in range(5):", "    greet('World')   "] },
+  { emoji: '♟️', label: 'Chess', level: 'Intermediate', anim: 'chess-tilt', code: ["Chess.com","username: 1Asiagi","1030 elo  ","come play me"]},
+  { emoji: '🕵️‍♂️', label: 'Reverse Engineering', level: 'Beginner', anim: 'detective-look', code: ["01100110 10101001 00110100 11001010", "E8 FF D4 89 01 23 45 67 ...  "] },
+  { emoji: '🔐', label: 'Cryptography', level: 'Beginner', anim: 'lock-wiggle', code: ["AES-256 Encryption", "RSA Keys Generated", "Caesar Shift: KHOOR   "] },
+  { emoji: '🌐', label: 'Web Exploitation', level: 'Beginner', anim: 'globe-spin', code: ["GET /index.html HTTP/1.1", "Host: example.com", "200 OK    "] },
 ]
 
 export default function Skills() {
@@ -30,14 +30,13 @@ export default function Skills() {
   }, [])
 
   return (
-    <section className="relative overflow-hidden w-full bg-[#ffffff] dark:bg-[#030712] py-12">
+    <section className="relative overflow-hidden w-full bg-[#fefefe] dark:bg-gray-900 py-12 transition-colors duration-700">
       {/* Section Label */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 tracking-wide">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 tracking-wide transition-colors duration-700">
           My Skills
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base mt-2">
-          Hover over the skills to see their magic
+        <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base mt-2 transition-colors duration-700">
         </p>
       </div>
 
@@ -46,12 +45,12 @@ export default function Skills() {
           <div
             key={idx}
             className={`relative flex-shrink-0 w-48 h-48 m-4 
-                       bg-[#ffffff] dark:bg-gray-900 rounded-2xl 
+                       bg-[#ffffff] dark:bg-gray-800 rounded-2xl 
                        border border-gray-300 dark:border-gray-700
                        text-center flex flex-col items-center justify-center 
-                       transition-transform duration-300 
+                       transition-all duration-700
                        cursor-pointer hover:scale-105 group overflow-hidden
-                       hover:bg-gray-200 dark:hover:bg-gray-800`}
+                       hover:bg-gray-100 dark:hover:bg-gray-700`}
             onMouseEnter={() => setHovered(idx)}
             onMouseLeave={() => setHovered(null)}
           >
@@ -63,8 +62,8 @@ export default function Skills() {
               {skill.emoji}
             </span>
 
-            <span className="text-gray-900 dark:text-white font-semibold relative z-10">{skill.label}</span>
-            <span className="text-sm text-gray-500 dark:text-gray-400 absolute bottom-3 z-10">
+            <span className="text-gray-900 dark:text-gray-100 font-semibold relative z-10 transition-colors duration-700">{skill.label}</span>
+            <span className="text-sm text-gray-500 dark:text-gray-400 absolute bottom-3 z-10 transition-colors duration-700">
               {skill.level}
             </span>
           </div>
@@ -144,8 +143,8 @@ function TypingTerminal({ lines }: { lines: string[] }) {
 
   return (
     <pre className="absolute inset-0 p-2 text-xs font-mono opacity-30 pointer-events-none whitespace-pre-wrap">
-      <span ref={bgRef} className="text-gray-800 dark:text-green-400"></span>
-      <span ref={cursorRef} className="text-gray-800 dark:text-green-400">_</span>
+      <span ref={bgRef} className="text-gray-800 dark:text-green-400 transition-colors duration-700"></span>
+      <span ref={cursorRef} className="text-gray-800 dark:text-green-400 transition-colors duration-700">_</span>
     </pre>
   )
 }
