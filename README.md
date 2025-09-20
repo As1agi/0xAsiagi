@@ -12,7 +12,7 @@ My blog is also featured on Vercel's template showcase under [Tailwind Next.js S
 - **TailwindCSS**  
 - **Javascript**  
 - **CSS**
-- - **Markdown**  
+- **Markdown**  
 
 ## Support
 
