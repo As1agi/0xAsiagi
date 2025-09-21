@@ -17,7 +17,7 @@ const siteMetadata = {
   email: '0xn00bi3@gmail.com',
   github: 'https://github.com/As1agi',
   twitter: 'https://x.com/0xAsiagi',
-  linkedin: 'https://www.linkedin.com/in/thetalhatahir',
+  linkedin: 'https://www.linkedin.com/in/asiagi',
   locale: 'en-US',
   analytics: {
     googleAnalytics: {
@@ -28,7 +28,7 @@ const siteMetadata = {
     provider: 'mailchimp',
   },
   comments: {
-    provider: 'giscus',
+    provider: 'undefined',
     giscusConfig: {
       repo: process.env.NEXT_PUBLIC_GISCUS_REPO,
       repositoryId: process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID,
