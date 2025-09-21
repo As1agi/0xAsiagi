@@ -28,7 +28,7 @@ const siteMetadata = {
     provider: 'mailchimp',
   },
   comments: {
-    provider: undefined,
+    provider: 'giscus',
     giscusConfig: {
       repo: process.env.NEXT_PUBLIC_GISCUS_REPO,
       repositoryId: process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID,
