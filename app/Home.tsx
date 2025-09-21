@@ -5,7 +5,7 @@ import Github from '@/components/Github'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import { themes, MAX_DISPLAY } from './constants'
-import Skills from '@/components/skills' 
+import Skills from '@/components/skills'
 
 export default function Home({ posts }) {
   const randomTheme = themes[Math.floor(Math.random() * themes.length)]
@@ -32,7 +32,8 @@ export default function Home({ posts }) {
 
           <div className="dark:text-grey text-gray mb-8 mt-4 text-base">
             <h2 className="text-xl leading-8 tracking-tight">
-              University student and learning enthusiast, passionate about backend systems, exploitation, and exploring how things work under the hood.
+              University student and learning enthusiast, passionate about backend systems,
+              exploitation, and exploring how things work under the hood.
             </h2>
           </div>
 
@@ -41,11 +42,13 @@ export default function Home({ posts }) {
 
           {/* Description */}
           <h3 className="text-md leading-7 text-gray dark:text-gray mt-6">
-            I write about my journey learning exploitation, backend development, cryptography, and other tech experiments. This is a space where I share discoveries, challenges, and thoughts while exploring deep backend systems and hacker-friendly tools.
+            I write about my journey learning exploitation, backend development, cryptography, and
+            other tech experiments. This is a space where I share discoveries, challenges, and
+            thoughts while exploring deep backend systems and hacker-friendly tools.
           </h3>
 
           {/* GitHub Component */}
-          <Github color={randomTheme.color}/>
+          <Github color={randomTheme.color} />
         </div>
 
         {/* Blog Posts */}

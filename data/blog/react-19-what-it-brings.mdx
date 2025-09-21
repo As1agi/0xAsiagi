@@ -33,12 +33,12 @@ type Comment = { id: string; text: string }
 async function addComment(prevState: string | null, formData: FormData) {
   const text = String(formData.get('text') || '')
   if (!text.trim()) return 'Comment cannot be empty'
-  
+
   // Your actual API call here
   try {
     await fetch('/api/comments', {
       method: 'POST',
-      body: JSON.stringify({ text })
+      body: JSON.stringify({ text }),
     })
     return null // Success
   } catch {
@@ -48,16 +48,19 @@ async function addComment(prevState: string | null, formData: FormData) {
 
 export default function CommentForm() {
   const [error, submitAction, isPending] = useActionState(addComment, null)
-  const [optimisticComments, addOptimistic] = useOptimistic<Comment[]>([], (state, newText: string) => [
-    { id: 'optimistic-' + Date.now(), text: newText },
-    ...state,
-  ])
+  const [optimisticComments, addOptimistic] = useOptimistic<Comment[]>(
+    [],
+    (state, newText: string) => [{ id: 'optimistic-' + Date.now(), text: newText }, ...state]
+  )
 
   return (
-    <form action={submitAction} onSubmit={(e) => {
-      const input = (e.currentTarget.elements.namedItem('text') as HTMLInputElement)
-      addOptimistic(input.value)
-    }}>
+    <form
+      action={submitAction}
+      onSubmit={(e) => {
+        const input = e.currentTarget.elements.namedItem('text') as HTMLInputElement
+        addOptimistic(input.value)
+      }}
+    >
       <input name="text" placeholder="Write a comment" />
       <button type="submit" disabled={isPending}>
         {isPending ? 'Posting...' : 'Post'}
@@ -74,8 +77,9 @@ export default function CommentForm() {
 ```
 
 What I love about this:
+
 - No more manually tracking `isSubmitting` states
-- Built-in error handling without try/catch everywhere  
+- Built-in error handling without try/catch everywhere
 - Optimistic UI updates feel natural, not hacky
 - Works without JavaScript (progressive enhancement)
 
@@ -131,6 +135,7 @@ I haven't used this much personally, but it's good to see React playing nicer wi
 Here's the thing I'm most excited about long-term: React Compiler automatically optimizes your components so you don't have to manually wrap everything in `useMemo` and `useCallback`.
 
 **Before** (the old way):
+
 ```tsx
 import { memo, useCallback, useMemo } from 'react'
 
@@ -150,6 +155,7 @@ const ProductList = memo(function ProductList({ items, onBuy }) {
 ```
 
 **After** (with React Compiler):
+
 ```tsx
 function ProductList({ items, onBuy }) {
   return (
@@ -181,6 +187,7 @@ I hit this recently when server-side timestamps didn't match client-side ones. I
 Here's my honest take: If you're on React 18, the upgrade is probably worth it, but you don't need to rush.
 
 **Start small:**
+
 - Try Actions on one form to see how they feel
 - Use `useOptimistic` where you have noticeable latency
 - Add the `use()` hook for simple async data
@@ -202,5 +209,3 @@ It's not going to change how you think about building React apps. But it will ma
 The Actions pattern alone saves me probably 30 minutes per form I build. The metadata support removes another dependency. The compiler (when it arrives) will eliminate hours of manual optimization.
 
 Those small quality-of-life improvements add up. That's exactly what a mature framework should be doing.
-
-

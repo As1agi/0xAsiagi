@@ -47,7 +47,7 @@ const ThemeSwitch = () => {
             <>
               <circle cx="12" cy="12" r="5" />
               {Array.from({ length: 8 }).map((_, i) => {
-                const angle = (i * 45) * (Math.PI / 180)
+                const angle = i * 45 * (Math.PI / 180)
                 const x1 = 12 + Math.cos(angle) * 7
                 const y1 = 12 + Math.sin(angle) * 7
                 const x2 = 12 + Math.cos(angle) * 9
@@ -61,17 +61,31 @@ const ThemeSwitch = () => {
 
       <style jsx>{`
         @keyframes breath {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.15); }
+          0%,
+          100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.15);
+          }
         }
         .animate-breath {
           animation: breath 2.5s ease-in-out infinite;
         }
 
         @keyframes sun-rotate {
-          0% { transform: rotate(0deg) scale(1); opacity: 1; }
-          50% { transform: rotate(22deg) scale(1.1); opacity: 0.8; }
-          100% { transform: rotate(0deg) scale(1); opacity: 1; }
+          0% {
+            transform: rotate(0deg) scale(1);
+            opacity: 1;
+          }
+          50% {
+            transform: rotate(22deg) scale(1.1);
+            opacity: 0.8;
+          }
+          100% {
+            transform: rotate(0deg) scale(1);
+            opacity: 1;
+          }
         }
         .animate-sun-rotate {
           animation: sun-rotate 3s ease-in-out infinite;

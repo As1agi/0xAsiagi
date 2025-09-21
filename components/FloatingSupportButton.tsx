@@ -32,9 +32,7 @@ const FloatingCoffeeWidget = () => {
         )}
       >
         <div className="mb-2 w-72 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-2xl shadow-2xl p-5">
-          <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">
-            Support Me
-          </h3>
+          <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">Support Me</h3>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-4">
             If you enjoy my work, support me here:
           </p>
@@ -83,15 +81,28 @@ const FloatingCoffeeWidget = () => {
       {/* Steam animation */}
       <style jsx>{`
         @keyframes steam {
-          0% { transform: translateY(0) scaleX(1); opacity: 0.3; }
-          50% { transform: translateY(-6px) scaleX(1.2); opacity: 0.6; }
-          100% { transform: translateY(-12px) scaleX(1); opacity: 0; }
+          0% {
+            transform: translateY(0) scaleX(1);
+            opacity: 0.3;
+          }
+          50% {
+            transform: translateY(-6px) scaleX(1.2);
+            opacity: 0.6;
+          }
+          100% {
+            transform: translateY(-12px) scaleX(1);
+            opacity: 0;
+          }
         }
         .animate-steam {
           animation: steam 2s infinite;
         }
-        .animate-steam.delay-200 { animation-delay: 0.2s; }
-        .animate-steam.delay-400 { animation-delay: 0.4s; }
+        .animate-steam.delay-200 {
+          animation-delay: 0.2s;
+        }
+        .animate-steam.delay-400 {
+          animation-delay: 0.4s;
+        }
       `}</style>
     </div>
   )

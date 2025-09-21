@@ -4,7 +4,8 @@ const siteMetadata = {
   author: 'Joseph Asiagi',
   authorLong: 'University student and learning enthusiast in cybersecurity and backend development',
   headerTitle: '0xAsiagi',
-  description: 'Thoughts and experiments on cybersecurity, backend systems, and learning tech deeply',
+  description:
+    'Thoughts and experiments on cybersecurity, backend systems, and learning tech deeply',
   skills: 'Python, Node.js, C++, Cryptography, Backend Development, Databases, Machine Learning',
   descriptionLong:
     'A personal space where I share my journey learning cybersecurity, backend development, cryptography, and tech experiments.',
